@@ -1,0 +1,56 @@
+servers:
+  memory:
+    transport: stdio
+    command: python
+    args: ["-m", "mcp.servers.memory"]
+    enabled: true
+    tags: ["memory", "retrieval"]
+
+  scripts:
+    transport: stdio
+    command: python
+    args: ["-m", "mcp.servers.scripts"]
+    enabled: true
+    tags: ["artifacts", "automation"]
+
+  port_manager:
+    transport: stdio
+    command: python
+    args: ["-m", "mcp.servers.port_manager"]
+    enabled: true
+    tags: ["network", "ports", "infra"]
+
+  filesystem:
+    transport: stdio
+    command: python
+    args: ["-m", "mcp.servers.filesystem"]
+    enabled: true
+    tags: ["files", "workspace", "safety"]
+
+  docker:
+    transport: stdio
+    command: python
+    args: ["-m", "mcp.servers.docker"]
+    enabled: true
+    tags: ["containers", "infra"]
+
+  github:
+    transport: stdio
+    command: python
+    args: ["-m", "mcp.servers.github"]
+    enabled: true
+    tags: ["source-control", "automation"]
+
+  luxonis:
+    transport: stdio
+    command: python
+    args: ["-m", "mcp.servers.luxonis"]
+    enabled: true
+    tags: ["vision", "luxonis", "depthai"]
+
+  ml:
+    transport: stdio
+    command: python
+    args: ["-m", "mcp.servers.ml"]
+    enabled: true
+    tags: ["ml", "training", "evaluation"]

@@ -1,0 +1,9 @@
+agent_policies:
+  generalist:
+    allow: ["memory", "scripts", "filesystem", "docker"]
+  port_manager:
+    allow: ["port_manager", "docker", "filesystem"]
+  luxonis_expert:
+    allow: ["memory", "luxonis", "scripts", "docker"]
+  ml_expert:
+    allow: ["memory", "ml", "scripts", "filesystem"]
