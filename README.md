@@ -19,12 +19,15 @@ The MCP layer acts as the tool bus for the agent runtime. Each MCP server can ex
 - resources for readable context
 - prompts for reusable workflows
 
+Copy `.env.example` to `.env` before running the stack. The example file uses clearly insecure placeholders for local setup only and must be replaced for any shared or production environment.
+
 ## Target Layout
 
 ```text
 agent-system/
   docker-compose.yml
   .env
+  .env.example
 
   mcp/
     registry/
